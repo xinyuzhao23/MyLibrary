@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		923FA95B1C459D4700C7B7D1 /* FilteredBooksCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923FA95A1C459D4700C7B7D1 /* FilteredBooksCollectionViewController.swift */; };
 		927119091C407D160091C17B /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927119081C407D160091C17B /* EditViewController.swift */; };
 		927BD4CA1C3DF83200C2800B /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927BD4C31C3DF83200C2800B /* Book.swift */; };
 		927BD4CB1C3DF83200C2800B /* BookCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927BD4C41C3DF83200C2800B /* BookCollectionViewCell.swift */; };
@@ -42,6 +43,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		923FA95A1C459D4700C7B7D1 /* FilteredBooksCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilteredBooksCollectionViewController.swift; sourceTree = "<group>"; };
 		927119081C407D160091C17B /* EditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
 		927BD4C31C3DF83200C2800B /* Book.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 		927BD4C41C3DF83200C2800B /* BookCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -116,6 +118,7 @@
 				92E694491C3DDC5B0032667E /* AppDelegate.swift */,
 				92E6944D1C3DDC5B0032667E /* Main.storyboard */,
 				927BD4D31C3DFD2900C2800B /* FilterViewController.swift */,
+				923FA95A1C459D4700C7B7D1 /* FilteredBooksCollectionViewController.swift */,
 				927BD4C31C3DF83200C2800B /* Book.swift */,
 				927BD4C41C3DF83200C2800B /* BookCollectionViewCell.swift */,
 				927BD4C51C3DF83200C2800B /* BookCollectionViewController.swift */,
@@ -297,6 +300,7 @@
 				92E694781C3DDCFE0032667E /* MainScreenViewController.swift in Sources */,
 				927BD4CE1C3DF83200C2800B /* BookViewController.swift in Sources */,
 				927BD4CC1C3DF83200C2800B /* BookCollectionViewController.swift in Sources */,
+				923FA95B1C459D4700C7B7D1 /* FilteredBooksCollectionViewController.swift in Sources */,
 				927BD4CD1C3DF83200C2800B /* BookInfoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

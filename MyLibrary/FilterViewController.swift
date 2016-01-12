@@ -35,7 +35,6 @@ class FilterViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Cancel", style: .Plain, target: self, action: "dismiss")
         
         genrePicker.dataSource = self
         genrePicker.delegate = self
@@ -187,12 +186,12 @@ class FilterViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
         if(answer == "Yes"){
             return true
         }
-        else {
+        else{
             return false
         }
     }
     
-    func sortBooks()
+    func sortBooks() -> [Book]
     {
         var sortedBooks = [Book]()
         for aBook in allBooks.books
@@ -201,19 +200,15 @@ class FilterViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
                 sortedBooks.append(aBook)
             }
         }
-        booksListed.books = sortedBooks
-        print(booksListed.books)
+        return sortedBooks
     }
     
     @IBAction func filterAction(sender: UIButton) {
-        sortBooks()
-        self.dismissViewControllerAnimated(true, completion: nil)
+        booksListed = Library(books: sortBooks())
+        let newVC = storyboard?.instantiateViewControllerWithIdentifier("FilteredBooks") as! FilteredBooksCollectionViewController
+        newVC.filteredBooks = booksListed
+        newVC.all = allBooks
+        navigationController?.pushViewController(newVC, animated: true)
     }
-
-    
-    @IBAction func cancelButton(sender: UIButton) {
-        dismissViewControllerAnimated(true, completion: nil)
-    }
-
 
 }

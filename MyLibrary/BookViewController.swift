@@ -13,7 +13,6 @@ class BookViewController: UIViewController, UIPickerViewDataSource, UIPickerView
     let MAX = 100
     var aBook: Book!
     var totalBooks: Library!
-    var showedBook:Library!
     var genrePicker = UIPickerView()
     var categoryPicker = UIPickerView()
     var statusPicker = UIPickerView()
@@ -224,8 +223,6 @@ class BookViewController: UIViewController, UIPickerViewDataSource, UIPickerView
         aBook = Book(title: titleText.text!, author: authorText.text!, genre: [genreTextField.text!, genre2Text.text!, genre3Text.text!], readStatus: read, category: categoryText.text!, pages: pageNumber, favorite: fav, favoriteQuote: favQuoteText.text!)
         
         totalBooks.books.append(aBook)
-        showedBook.books.append(aBook)
-        print("book fav: \(aBook.favorite)")
         self.navigationController!.popViewControllerAnimated(true)
     }
     

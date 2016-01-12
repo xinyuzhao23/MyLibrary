@@ -123,19 +123,13 @@ class BookInfoViewController: UIViewController {
     }
 
     @IBAction func deleteBook(sender: UIButton) {
-        let index = showedBooks.books.indexOf(theBook)
-        var ind = 0
-        var i: Int
-        for i = 0; i < allBooks.books.count; i++
+        let index = allBooks.books.indexOf(theBook)
+        allBooks.books.removeAtIndex(index!)
+        if(showedBooks != nil)
         {
-            if(allBooks.books[i].compareTo(theBook)){
-                ind = i
-                break
-            }
+            let ind = showedBooks.books.indexOf(theBook)
+            showedBooks.books.removeAtIndex(ind!)
         }
-        
-        allBooks.books.removeAtIndex(ind)
-        showedBooks.books.removeAtIndex(index!)
         navigationController?.popViewControllerAnimated(true)
     }
     /*

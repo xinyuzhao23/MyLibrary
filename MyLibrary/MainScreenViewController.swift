@@ -42,7 +42,7 @@ class MainScreenViewController: UIViewController {
         if(segue.identifier == "enter")
         {
             let newVC = segue.destinationViewController as! BookCollectionViewController
-            newVC.bookList = bookList
+            newVC.allBooks = bookList
         }
     }
     
